@@ -3,6 +3,13 @@
   padding: 0;
   box-sizing: border-box;
 }
+.title {
+  margin: 0% 0px -10px;
+  padding: 10px;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  color: rgb(197, 195, 223);
+}
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: rgb(82, 77, 122);
@@ -13,6 +20,8 @@ body {
   width: 98%;
   max-width: 600px;
   margin: 20px auto;
+}
+.table--container {
   overflow-x: scroll;
 }
 fieldset {
@@ -34,6 +43,7 @@ legend {
   padding: 7px;
   margin-top: 10px;
 }
+
 .form-group input[type="reset"],
 input[type="submit"] {
   width: unset;
@@ -42,8 +52,22 @@ input[type="submit"] {
   color: rgb(149, 145, 182);
 }
 table {
-  width: 700px;
+  width: 600px;
   border-collapse: collapse;
+}
+
+.fa-trash {
+  margin-right: 10px;
+}
+@media screen and (max-width: 768px) {
+  table {
+    width: 500px;
+  }
+  .form--container,
+  .table--container {
+    width: 98%;
+    max-width: 500px;
+  }
 }
 td,
 th {

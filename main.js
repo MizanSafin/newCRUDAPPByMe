@@ -46,7 +46,7 @@ function showDataToTable() {
                <td>${item.name}</td>
                <td>${item.job}</td>
                <td>${item.exp}</td>
-               <td>
+               <td class="action--btns">
                     <i onclick=deleteItem(${index})  class="fas fa-trash"></i>
                     <i onclick=editItem(${index})  class="fas fa-edit"></i>
                </td>

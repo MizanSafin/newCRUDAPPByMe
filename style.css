@@ -13,11 +13,14 @@ body {
   width: 98%;
   max-width: 600px;
   margin: 20px auto;
+  overflow-x: scroll;
 }
 fieldset {
+  width: 100%;
   padding: 10px;
   border-color: rgb(149, 145, 182);
 }
+
 legend {
   font-size: 22px;
 }
@@ -39,8 +42,7 @@ input[type="submit"] {
   color: rgb(149, 145, 182);
 }
 table {
-  width: 100%;
-  overflow-x: scroll;
+  width: 700px;
   border-collapse: collapse;
 }
 td,
@@ -54,3 +56,53 @@ th {
 i {
   cursor: pointer;
 }
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background: black;
+}
+
+/* table {
+  width: 100%;
+  border-collapse: collapse;
+  display: inline-grid;
+  grid-template-areas:
+    "head-fixed"
+    "body-scrollable";
+} */
+
+/* thead {
+  grid-area: head-fixed;
+}
+
+tbody {
+  grid-area: body-scrollable;
+  overflow: auto;
+} */
+
+/* thead and tbody */
+
+/* thead {
+  grid-area: head-fixed;
+  display: block;
+  background-color: #08381f;
+  display: table;
+  width: calc(100% - 5px);
+}
+
+tbody {
+  grid-area: body-scrollable;
+  display: block;
+   max-height: 360px;
+  width: calc(100% - 5px);
+  overflow-y: scroll;
+} 
+*/

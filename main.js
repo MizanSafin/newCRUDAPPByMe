@@ -14,7 +14,7 @@ if (lsDataArr) {
 let splicedItem;
 let indexV;
 function handleFormSubmit() {
-  if (splicedItem === null) {
+  if (splicedItem == null) {
     const formData = fetchDataFromForm();
     sendDataToLS(formData);
     showDataToTable();

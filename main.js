@@ -14,7 +14,7 @@ if (lsDataArr) {
 let splicedItem;
 let indexV;
 function handleFormSubmit() {
-  if (splicedItem == null) {
+  if (splicedItem == undefined) {
     const formData = fetchDataFromForm();
     sendDataToLS(formData);
     showDataToTable();
@@ -86,6 +86,8 @@ function resetForm() {
   nameEl.value = "";
   jobEl.value = "";
   expEl.value = "";
+  splicedItem = null;
+  indexV = null;
 }
 
 //Praccticing or problem solving

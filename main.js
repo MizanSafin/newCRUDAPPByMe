@@ -14,7 +14,7 @@ if (lsDataArr) {
 let splicedItem;
 let indexV;
 function handleFormSubmit() {
-  if (splicedItem == undefined) {
+  if (splicedItem === null) {
     const formData = fetchDataFromForm();
     sendDataToLS(formData);
     showDataToTable();
@@ -58,7 +58,7 @@ function showDataToTable() {
 showDataToTable();
 
 function deleteItem(index) {
-  dataArr.splice(index, index + 1);
+  dataArr.splice(index, 1);
   localStorage.setItem("dataArr", JSON.stringify(dataArr));
   showDataToTable();
 }
@@ -121,3 +121,7 @@ function resetForm() {
 // personsArr = newArr;
 // console.log(personsArr);
 // console.log(newArr);
+
+const day = new Date().toLocaleString("bn-BD", { month: "2-digit" });
+console.log(day);
+// const result = day >= 1 && day <= 5 ? "WorkDay" : "Weekenday";
